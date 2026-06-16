@@ -243,3 +243,67 @@ Close
 <source src="about-you.mp3" type="audio/mpeg">
 
 </audio>
+<script>
+const surat = `happy birthday ya, aku ga lupa kok, walaupun hubungan kita telah selesai, bukan berarti aku tidak mengucapkan selamat kepada mu.
+
+happy birthday, my once upon a happiness.
+
+maafff aku gak bisaa ungkapin ini secara langsung — semoga kamu bisa menjadi perempuan yang berguna buat orang banyak, seperti biasanya setiap manusia bertambah usia...
+
+aku harap di umur kamu yang sekarang kamu beranjak dewasa dan aku berdoa yang terbaik, meski mungkin versi terbaik dalam kita itu beda.
+
+ada banyak semoga yang harus diaminkan, tapi yang pasti — the best for you.
+
+bisa nentuin arah hidup kamu mau kemana.
+
+kurangi main malem nya ya? udah bukan anak kecil lagi kan?
+
+udah waktunya kamu mikirin masa depan kamu.
+
+karena ga selamanya kamu bakal gini terus.
+
+semoga kedepannya kamu dipermudah apapun yang kamu mau capai.
+
+dan semoga kamu dikelilingi orang-orang yang tulus yang sayang sama kamu.
+
+❤️
+About You – The 1975`;
+
+const envelope = document.getElementById("envelope");
+const letter = document.getElementById("letter");
+const text = document.getElementById("text");
+const music = document.getElementById("music");
+
+let i = 0;
+
+envelope.addEventListener("click", () => {
+
+    letter.style.display = "flex";
+
+    music.play().catch(()=>{});
+
+    text.innerHTML="";
+
+    i=0;
+
+    typeWriter();
+
+});
+
+function typeWriter(){
+
+    if(i < surat.length){
+
+        text.innerHTML += surat.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,30);
+
+    }
+
+}
+</script>
+
+</body>
+</html>
